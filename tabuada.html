@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+
+    <style>
+
+        body {
+        text-align: center;
+        }
+    
+        
+        .quadrado {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid black;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tabuada: clique para obter resultados...</h1>
+
+    <div>
+        <div class="quadrado" onclick="mostrarTabuada(1)">1</div>
+        <div class="quadrado" onclick="mostrarTabuada(2)">2</div>
+        <div class="quadrado" onclick="mostrarTabuada(3)">3</div>
+        <div class="quadrado" onclick="mostrarTabuada(4)">4</div>
+        <div class="quadrado" onclick="mostrarTabuada(5)">5</div>
+        <div class="quadrado" onclick="mostrarTabuada(6)">6</div>
+        <div class="quadrado" onclick="mostrarTabuada(7)">7</div>
+        <div class="quadrado" onclick="mostrarTabuada(8)">8</div>
+        <div class="quadrado" onclick="mostrarTabuada(9)">9</div>
+        <div class="quadrado" onclick="mostrarTabuada(10)">10</div>
+    </div>
+
+    <div id="resultado"></div>
+
+    <script>
+        function mostrarTabuada(n) {
+            let texto = "<h2>Tabuada do " + n + "</h2>";
+            for (let i = 1; i <= 10; i++) {
+                texto += n + " x " + i + " = " + (n * i) + "<br>";
+            }
+            document.getElementById("resultado").innerHTML = texto;
+        }
+    </script>
+
+</body>
+</html>
